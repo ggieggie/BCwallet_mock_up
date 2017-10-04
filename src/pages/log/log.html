@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="custom-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      取引履歴
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="log-content" padding>
+    <button ion-button class="submit-btn" full icon-left (click) = "get()"><ion-icon name="md-information-circle"></ion-icon>get（最新10件）</button>
+    <ion-list>
+    <ion-item *ngFor="let log of logs.reverse()">
+
+      <!-- アイコン検索 -->
+      <!-- master -->
+      <ion-avatar item-left *ngIf="log.addresses[0] == '1Zz3rAJ5mBTQepG5uJbkuvF79f3FaKvmyR7f3r'">
+        <img src="assets/img/master.jpg">
+      </ion-avatar>
+
+      <!-- kiyota -->
+      <ion-avatar item-left *ngIf="log.addresses[0] == '1DzhEqzER8vsja3s25TGsBSuAWuqUaXwk66s3A'">
+          <img src="assets/img/k.jpg">
+        </ion-avatar>
+
+      <!-- tomoto -->
+      <ion-avatar item-left *ngIf="log.addresses[0] == '1XhgukBiUELDAMuNiKoefktkgC6NNYVuLTuFqJ'">
+          <img src="assets/img/t.jpg">
+        </ion-avatar>
+
+      <h2>address : {{ log.addresses[0] }}</h2>
+      <h2 *ngIf="log.balance.assets[0].qty > 0">受信 : {{ log.balance.assets[0].qty }} MRC</h2>
+      <h2 *ngIf="log.balance.assets[0].qty < 0">送金 : {{ log.balance.assets[0].qty * -1 }} MRC</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="custom-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      仮想通貨の内部情報
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="transaction-content" padding>
+  <h1 id="page4-heading2" style="color:#000000;text-align:center;">
+    MultiChain Information
+  </h1>
+    <ion-list>
+        <ion-item>
+          <div id="page4-markdown13" class="show-list-numbers-and-dots">
+            <h5 style="color:#000000;">
+              Assets: {{assets}}
+            </h5>
+          </div>
+  <div id="page4-markdown12" class="show-list-numbers-and-dots">
+    <h5 style="color:#000000;">
+      Block: {{block | number}}
+    </h5>
+  </div>
+  <div id="page4-markdown14" class="show-list-numbers-and-dots">
+    <h5 style="color:#000000;">
+      TotalBalance: {{totalBalance | number}}
+    </h5>
+  </div>
+</ion-item>
+<ion-item>
+  <div id="page4-markdown13" class="show-list-numbers-and-dots">
+    <h5 style="color:#000000;">
+      Assets: {{assets2}}
+    </h5>
+  </div>
+  <div id="page4-markdown12" class="show-list-numbers-and-dots">
+    <h5 style="color:#000000;">
+      Block: {{block2 | number}}
+    </h5>
+  </div>
+  <div id="page4-markdown14" class="show-list-numbers-and-dots">
+    <h5 style="color:#000000;">
+      TotalBalance: {{totalBalance2 | number}}
+    </h5>
+  </div>
+</ion-item>
+</ion-list>
+  <button ion-button class="submit-btn" full icon-left (click) = "get()"><ion-icon name="md-information-circle"></ion-icon>get</button>
+</ion-content>

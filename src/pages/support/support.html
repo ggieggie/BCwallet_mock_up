@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>各種お問い合わせ</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="returntabs()" color="primary">戻る︎</button>
+      </ion-buttons>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content>
+    <div class="logo">
+      <img src="assets/img/tomato_30_1.png" alt="Ionic Logo">
+    </div>
+
+    <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label stacked color="primary">お問い合わせ内容を記載し送信ボタンを押してください。</ion-label>
+          <ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="6" required></ion-textarea>
+        </ion-item>
+      </ion-list>
+
+      <p ion-text [hidden]="supportQuestion.valid || submitted === false" color="danger" padding-left>
+        Support message is required
+      </p>
+
+      <div padding>
+        <button ion-button block type="submit">送信</button>
+      </div>
+    </form>
+  </ion-content>

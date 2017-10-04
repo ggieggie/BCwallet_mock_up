@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      アカウント情報
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="returntabs()" color="primary">戻る︎</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <div padding-top text-center *ngIf="username">
+    <img src="assets/img/{{iconId}}" alt="avatar">
+    <h2>{{username}}</h2>
+    <h2>{{email}}</h2>
+  </div>
+</ion-content>

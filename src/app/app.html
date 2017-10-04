@@ -1,0 +1,41 @@
+<ion-menu [content]="mainContent">
+
+      <ion-header>
+        <ion-toolbar color="custom-color">
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content id="side-menu21">
+
+        <ion-list id="menu-list1">
+          <ion-list-header>
+            管理・設定
+          </ion-list-header>
+          <button ion-item menuClose (click)="openAccount()">
+            <ion-icon item-start name="person"></ion-icon>
+            アカウント
+          </button>
+          <button ion-item menuClose (click)="openSupport()">
+            <ion-icon item-start name="help"></ion-icon>
+            各種お問い合わせ
+          </button>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header>
+            チュートリアル
+          </ion-list-header>
+          <button ion-item menuClose (click)="openTutorial()">
+            <ion-icon item-start name="hammer"></ion-icon>
+            チュートリアル
+          </button>
+        </ion-list>
+
+      </ion-content>
+    </ion-menu>
+
+    <ion-nav #mainContent [root]="rootPage"></ion-nav>
