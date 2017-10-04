@@ -80,7 +80,9 @@ export class TransactionPage {
           this.assets = "error";
         }else{
         console.log("info: "+JSON.stringify(result.result[0].name));
-        this.assets = JSON.stringify(result.result[0].name).substr(1,8);
+        //marucoin => tomacoin
+        //this.assets = JSON.stringify(result.result[0].name).substr(1,8);
+        this.assets = "tomacoin";
         this.totalBalance= JSON.stringify(result.result[0].issueqty)
         }
         }, error => {
