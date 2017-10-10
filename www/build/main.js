@@ -995,74 +995,13 @@ SupportPage = __decorate([
 
 /***/ }),
 
-/***/ 229:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var TutorialPage = (function () {
-    function TutorialPage(navCtrl, menu, viewCtrl) {
-        this.navCtrl = navCtrl;
-        this.menu = menu;
-        this.viewCtrl = viewCtrl;
-        this.showSkip = true;
-    }
-    TutorialPage.prototype.startApp = function () {
-        this.viewCtrl.dismiss();
-    };
-    TutorialPage.prototype.onSlideChangeStart = function (slider) {
-        this.showSkip = !slider.isEnd();
-    };
-    TutorialPage.prototype.ionViewWillEnter = function () {
-        this.slides.update();
-    };
-    TutorialPage.prototype.ionViewDidEnter = function () {
-        // the root left menu should be disabled on the tutorial page
-        this.menu.enable(false);
-    };
-    TutorialPage.prototype.ionViewDidLeave = function () {
-        // enable the root left menu when leaving the tutorial page
-        this.menu.enable(true);
-    };
-    return TutorialPage;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('slides'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Slides */])
-], TutorialPage.prototype, "slides", void 0);
-TutorialPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tutorial',template:/*ion-inline-start:"/Users/sumiden/dev/prod4/src/pages/tutorial/tutorial.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <ion-buttons end *ngIf="showSkip">\n      <button ion-button (click)="startApp()" color="primary">スキップする</button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce>\n  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>\n      <h2 class="slide-title">\n        Welcome to <b>ICA</b>\n      </h2>\n      <p>\n        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.\n      </p>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>\n      <h2 class="slide-title" >What is Ionic?</h2>\n      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>\n      <h2 class="slide-title">What is Ionic Platform?</h2>\n      <p>The <b>Ionic Platform</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.</p>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>\n      <h2 class="slide-title">Ready to Play?</h2>\n      <button ion-button icon-end large clear (click)="startApp()">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"/Users/sumiden/dev/prod4/src/pages/tutorial/tutorial.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ViewController */]])
-], TutorialPage);
-
-//# sourceMappingURL=tutorial.js.map
-
-/***/ }),
-
-/***/ 234:
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(248);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1070,7 +1009,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 249:
+/***/ 248:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1079,7 +1018,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_top_top__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_send_send__ = __webpack_require__(116);
@@ -1092,7 +1031,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_create_create_module__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_account_account__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_support_support__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_tutorial_tutorial__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_tutorial_tutorial__ = __webpack_require__(315);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_status_bar__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_splash_screen__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_barcode_scanner__ = __webpack_require__(223);
@@ -1203,7 +1142,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 315:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1214,7 +1153,6 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_tabs_tabs__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_account_account__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_support_support__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tutorial_tutorial__ = __webpack_require__(229);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1230,7 +1168,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
+//import { TutorialPage } from '../pages/tutorial/tutorial';
 
 var MyApp = (function () {
     function MyApp(platform, statusBar, toastCtrl, alertCtrl, modalCtrl) {
@@ -1322,10 +1260,11 @@ var MyApp = (function () {
         var loginModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__pages_support_support__["a" /* SupportPage */], {}, { "enableBackdropDismiss": false });
         loginModal.present();
     };
-    MyApp.prototype.openTutorial = function () {
-        var loginModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__pages_tutorial_tutorial__["a" /* TutorialPage */], {}, { "enableBackdropDismiss": false });
-        loginModal.present();
-    };
+    /*
+     openTutorial() {
+       let loginModal = this.modalCtrl.create(TutorialPage,{},{"enableBackdropDismiss":false});
+       loginModal.present();  }
+    */
     MyApp.prototype.isActive = function (page) {
         var childNav = this.navCtrl.getActiveChildNavs()[0];
         // Tabs are a special case because they have their own navigation
@@ -1347,13 +1286,74 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Nav */])
 ], MyApp.prototype, "navCtrl", void 0);
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/sumiden/dev/prod4/src/app/app.html"*/'<ion-menu [content]="mainContent">\n\n      <ion-header>\n        <ion-toolbar color="custom-color">\n            <button ion-button menuToggle>\n                <ion-icon name="menu"></ion-icon>\n              </button>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n\n      <ion-content id="side-menu21">\n\n        <ion-list id="menu-list1">\n          <ion-list-header>\n            管理・設定\n          </ion-list-header>\n          <button ion-item menuClose (click)="openAccount()">\n            <ion-icon item-start name="person"></ion-icon>\n            アカウント\n          </button>\n          <button ion-item menuClose (click)="openSupport()">\n            <ion-icon item-start name="help"></ion-icon>\n            各種お問い合わせ\n          </button>\n        </ion-list>\n\n        <ion-list>\n          <ion-list-header>\n            チュートリアル\n          </ion-list-header>\n          <button ion-item menuClose (click)="openTutorial()">\n            <ion-icon item-start name="hammer"></ion-icon>\n            チュートリアル\n          </button>\n        </ion-list>\n\n      </ion-content>\n    </ion-menu>\n\n    <ion-nav #mainContent [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/sumiden/dev/prod4/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/sumiden/dev/prod4/src/app/app.html"*/'<ion-menu [content]="mainContent">\n\n      <ion-header>\n        <ion-toolbar color="custom-color">\n            <button ion-button menuToggle>\n                <ion-icon name="menu"></ion-icon>\n              </button>\n          <ion-title>Menu</ion-title>\n        </ion-toolbar>\n      </ion-header>\n\n      <ion-content id="side-menu21">\n\n        <ion-list id="menu-list1">\n          <ion-list-header>\n            管理・設定\n          </ion-list-header>\n          <button ion-item menuClose (click)="openAccount()">\n            <ion-icon item-start name="person"></ion-icon>\n            アカウント\n          </button>\n          <button ion-item menuClose (click)="openSupport()">\n            <ion-icon item-start name="help"></ion-icon>\n            各種お問い合わせ\n          </button>\n        </ion-list>\n<!--\n        <ion-list>\n          <ion-list-header>\n            チュートリアル\n          </ion-list-header>\n          <button ion-item menuClose (click)="openTutorial()">\n            <ion-icon item-start name="hammer"></ion-icon>\n            チュートリアル\n          </button>\n        </ion-list>\n      -->\n\n      </ion-content>\n    </ion-menu>\n\n    <ion-nav #mainContent [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/sumiden/dev/prod4/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 315:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TutorialPage = (function () {
+    function TutorialPage(navCtrl, menu, viewCtrl) {
+        this.navCtrl = navCtrl;
+        this.menu = menu;
+        this.viewCtrl = viewCtrl;
+        this.showSkip = true;
+    }
+    TutorialPage.prototype.startApp = function () {
+        this.viewCtrl.dismiss();
+    };
+    TutorialPage.prototype.onSlideChangeStart = function (slider) {
+        this.showSkip = !slider.isEnd();
+    };
+    TutorialPage.prototype.ionViewWillEnter = function () {
+        this.slides.update();
+    };
+    TutorialPage.prototype.ionViewDidEnter = function () {
+        // the root left menu should be disabled on the tutorial page
+        this.menu.enable(false);
+    };
+    TutorialPage.prototype.ionViewDidLeave = function () {
+        // enable the root left menu when leaving the tutorial page
+        this.menu.enable(true);
+    };
+    return TutorialPage;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('slides'),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Slides */])
+], TutorialPage.prototype, "slides", void 0);
+TutorialPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-tutorial',template:/*ion-inline-start:"/Users/sumiden/dev/prod4/src/pages/tutorial/tutorial.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <ion-buttons end *ngIf="showSkip">\n      <button ion-button (click)="startApp()" color="primary">スキップする</button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content no-bounce>\n  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image"/>\n      <h2 class="slide-title">\n        Welcome to <b>ICA</b>\n      </h2>\n      <p>\n        The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.\n      </p>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image"/>\n      <h2 class="slide-title" >What is Ionic?</h2>\n      <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image"/>\n      <h2 class="slide-title">What is Ionic Platform?</h2>\n      <p>The <b>Ionic Platform</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.</p>\n    </ion-slide>\n\n    <ion-slide>\n      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>\n      <h2 class="slide-title">Ready to Play?</h2>\n      <button ion-button icon-end large clear (click)="startApp()">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"/Users/sumiden/dev/prod4/src/pages/tutorial/tutorial.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* MenuController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ViewController */]])
+], TutorialPage);
+
+//# sourceMappingURL=tutorial.js.map
 
 /***/ }),
 
@@ -1433,7 +1433,7 @@ var LoginPage = (function () {
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/sumiden/dev/prod4/src/pages/login/login.html"*/'<ion-content class="login-content" padding>\n  <ion-row >\n    <ion-col>\n      <img src="assets/img/title.png" width="200">\n      <img src="assets/img/logo.png" width="200">\n      <div>ver.0.32</div>\n    </ion-col>\n  </ion-row>\n  <div class="login-box">\n    <form #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list>\n            <ion-item>\n              <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>\n            </ion-item>\n            <ion-item>\n              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n            </ion-item>\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid" (click)="login()">ログイン</button>\n          <button ion-button class="register-btn" block clear (click)="createAccount()">アカウントを作成する</button>\n        </ion-col>\n      </ion-row>\n\n    </form>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/sumiden/dev/prod4/src/pages/login/login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"/Users/sumiden/dev/prod4/src/pages/login/login.html"*/'<ion-content class="login-content" padding>\n  <ion-row >\n    <ion-col>\n      <img src="assets/img/title.png" width="200">\n      <img src="assets/img/logo.png" width="200">\n      <div>ver.1.00</div>\n    </ion-col>\n  </ion-row>\n  <div class="login-box">\n    <form #registerForm="ngForm">\n      <ion-row>\n        <ion-col>\n          <ion-list>\n            <ion-item>\n              <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>\n            </ion-item>\n            <ion-item>\n              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>\n            </ion-item>\n          </ion-list>\n        </ion-col>\n      </ion-row>\n\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid" (click)="login()">ログイン</button>\n          <button ion-button class="register-btn" block clear (click)="createAccount()">アカウントを作成する</button>\n        </ion-col>\n      </ion-row>\n\n    </form>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/sumiden/dev/prod4/src/pages/login/login.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */],
@@ -1596,5 +1596,5 @@ CreatePage = __decorate([
 
 /***/ })
 
-},[234]);
+},[233]);
 //# sourceMappingURL=main.js.map

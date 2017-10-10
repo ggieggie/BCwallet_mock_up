@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { AccountPage } from '../pages/account/account';
 import { SupportPage } from '../pages/support/support';
-import { TutorialPage } from '../pages/tutorial/tutorial';
+//import { TutorialPage } from '../pages/tutorial/tutorial';
 import { NavController, ModalController } from 'ionic-angular';
 
 export interface PageInterface {
@@ -123,9 +123,11 @@ export class MyApp {
      let loginModal = this.modalCtrl.create(SupportPage,{},{"enableBackdropDismiss":false});
      loginModal.present();  }
  
+  /*  
    openTutorial() {
      let loginModal = this.modalCtrl.create(TutorialPage,{},{"enableBackdropDismiss":false});
      loginModal.present();  }
+  */
  
    isActive(page: PageInterface) {
      let childNav = this.navCtrl.getActiveChildNavs()[0];
